@@ -13,6 +13,8 @@ gcc -o bin/line_buffer line_buffer.c
 {{  ""mmssgg""::  ""ggooooddbbyyee  ::((""  }}
 ```
 
+Similarly broken log lines will also be written to `tee.log`.
+
 It also shows that you can work around this by piping output into a program that does the line buffering for you (`./bin/tee_breaker | ./bin/line_buffer | tee -a tee.log`).
 
 with line buffering:
